@@ -30,9 +30,13 @@ class BinaryTree {
 
 const list = new BinaryTree('C');
 console.log(list);
-list.add('B', this.root);
+list.add('B', list.root);
 console.log(list);
-list.add('A', this.root);
+list.add('A', list.root);
 console.log(list);
-list.add('D', this.root);
+list.add('D', list.root);
+console.log(list);
+list.add('F', list.root);
+console.log(list);
+list.add('M', list.root);
 console.log(list);
