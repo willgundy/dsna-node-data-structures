@@ -72,14 +72,11 @@ class personTree {
       }
   
     findPerson(name, current) {
-        console.log('current', current);
       if ( name === current.value) {
         return current.person;
       } else if ( name < current.value) {
-        console.log('right', current.right);
         return this.findPerson(name, current.right);
       } else {
-        console.log('left', current.left);
         return this.findPerson(name, current.left);
       }
     }
