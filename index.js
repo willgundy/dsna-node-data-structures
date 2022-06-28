@@ -19,11 +19,10 @@ class LinkedList {
   }
   removeTail() {
     let current = this.head;
-    if (!current.next.next) {
-      current.next = null;
-    } else {
-      current.next = null;
+    while (current.next.next) {
+      current = current.next;
     }
+    current.next = null;
     return current;
   }
 
@@ -44,6 +43,8 @@ console.log(list.head);
 list.add('B');
 console.log(list.getList());
 list.add('C');
+console.log(list.getList());
+list.add('D');
 console.log(list.getList());
 list.removeTail();
 console.log(list.getList());
